@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/lra/setup-kubeval/issues"
   },
-  "homepage": "https://github.com/lra/setup-kubeval#readme"
+  "homepage": "https://github.com/lra/setup-kubeval#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.4",
+    "@actions/exec": "^1.0.4"
+  }
 }
