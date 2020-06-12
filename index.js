@@ -8,6 +8,10 @@ const version = core.getInput('version');
 
 async function main() {
   try {
+    await exec.exec('id');
+    await exec.exec('pwd');
+    await exec.exec('touch', ['/tmp/glop']);
+    await exec.exec('ls', ['-al', '/tmp/']);
     await exec.exec('curl', [
       '-L',
       '-o /tmp/kubeval-linux-amd64.tar.gz',
