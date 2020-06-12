@@ -1,0 +1,14 @@
+name: Setup Kubeval
+description: Set up a specific version of Kubeval and add it to the PATH.
+author: Laurent Raufaste <analogue@glop.org>
+branding:
+  color: blue
+  icon: check-square
+inputs:
+  version:
+    description: "Kubeval version to install (default: 0.15.0)"
+    required: false
+    default: 0.15.0
+runs:
+  using: node12
+  main: dist/index.js

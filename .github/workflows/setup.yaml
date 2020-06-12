@@ -1,0 +1,19 @@
+name: Setup
+on: [push]
+
+jobs:
+  setup-without-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./
+      - run: kubeval --version
+
+  setup-with-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./
+        with:
+          version: 0.15.0
+      - run: kubeval --version
