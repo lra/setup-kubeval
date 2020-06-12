@@ -1,3 +1,4 @@
+name: Setup
 on: [push]
 
 jobs:
@@ -16,16 +17,3 @@ jobs:
         with:
           version: 0.15.0
       - run: kubeval --version
-
-  test-env:
-    runs-on: ubuntu-latest
-    steps:
-      - run: curl --version
-      - run: ls -al /
-      - run: ls -al /tmp/
-      - uses: actions/checkout@v2
-      - run: ls -al /
-      - run: ls -al /tmp/
-      - run: curl --help
-      - run: touch /tmp/glop
-      - run: curl -L -o /tmp/kubeval-linux-amd64.tar.gz https://github.com/instrumenta/kubeval/releases/download/0.15.0/kubeval-linux-amd64.tar.gz
