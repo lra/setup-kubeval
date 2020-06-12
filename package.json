@@ -1,0 +1,20 @@
+{
+  "name": "setup-kubeval",
+  "version": "1.0.0",
+  "description": "This action installs a specific version of kubeval.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lra/setup-kubeval.git"
+  },
+  "keywords": [],
+  "author": "Laurent Raufaste <analogue@glop.org> (http://www.glop.org/)",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/lra/setup-kubeval/issues"
+  },
+  "homepage": "https://github.com/lra/setup-kubeval#readme"
+}
