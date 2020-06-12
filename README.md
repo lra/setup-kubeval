@@ -1,6 +1,6 @@
 # setup-kubeval V1
 
-This action installs a specific version of kubeval.
+This action installs a specific version of [kubeval](https://www.kubeval.com/).
 
 ## Inputs
 
