@@ -4,7 +4,7 @@
   "description": "This action installs a specific version of kubeval.",
   "main": "dist/index.js",
   "scripts": {
-    "package": "ncc build index.js -o dist"
+    "build": "ncc build index.js -o dist"
   },
   "repository": {
     "type": "git",
