@@ -10,5 +10,15 @@ inputs:
     required: false
     default: 0.15.0
 runs:
-  using: node12
-  main: dist/index.js
+  using: composite
+  steps:
+    - run: curl -L https://github.com/instrumenta/kubeval/releases/download/${{ inputs.version }}/kubeval-linux-amd64.tar.gz -o /tmp/kubeval-linux-amd64.tar.gz
+      shell: bash
+    - run: mkdir /tmp/kubeval
+      shell: bash
+    - run: tar -C /tmp/kubeval/ -zxvf /tmp/kubeval-linux-amd64.tar.gz
+      shell: bash
+    - run: sudo cp /tmp/kubeval/kubeval /usr/local/bin
+      shell: bash
+    - run: rm -rf /tmp/kubeval/ /tmp/kubeval-linux-amd64.tar.gz
+      shell: bash
